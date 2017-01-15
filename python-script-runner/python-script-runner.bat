@@ -4,6 +4,10 @@ echo "Enter the full script path, or just continue if there is only 1 local pyth
 
 set /p script=":"
 
+echo "Enter input parameters, separated by spaces"
+
+set /p params=":"
+
 if [%script%]==[] (
 
     for %%s in (*.*) do (
@@ -13,6 +17,6 @@ if [%script%]==[] (
 )
 
 :end
-python %script% %*
+python %script% %params%
 
 pause
